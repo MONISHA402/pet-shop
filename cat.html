@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cat</title>
+  <link rel="stylesheet" href="css/catdesign.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+ <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+ />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+ 
+</head>
+<body>
+ <!-- Navigation -->
+  <nav class="navbar">
+    <div class="menu">
+      <div class="dropdown">
+      <button class="dropdown-btn"><a href="index.html">Home</a></button>
+      </div>
+      
+      
+      <div class="dropdown">
+      <button class="dropdown-btn" onclick="toggleDropdown(this)">Dogs ▼</button>
+      <div class="mega-menu">
+        <div class="column">
+          <h3>Food</h3>
+          <a href="#">Dry Food</a>
+          <a href="#">Wet Food </a>
+          <a href="#">Prescribed Food</a>
+          
+        </div>
+        <div class="column">
+          <h3>Treats</h3>
+          <a href="#">Biscuit</a>
+          <a href="#">Dental Treats</a>
+          <a href="#">Calcium chew</a>
+          <a href="#">Chicken Treat</a>
+        </div>
+        <div class="column">
+          <h3>Clothing</h3>
+          <a href="#">Coat</a>
+          <a href="#">Jacket</a>
+          <a href="#">T shirt</a>
+          <a href="#">Shirt</a>
+        </div>
+        <div class="column">
+          <h3>Groom</h3>
+          <a href="#">Shampoos</a>
+          <a href="#">Wipes</a>
+          <a href="#">Grooming Tool</a>
+        </div>
+      </div>
+    </div>
+<!-- cat -->
+    <div class="dropdown">
+      <button class="dropdown-btn" onclick="toggleDropdown(this)">Cats ▼</button>
+      <div class="mega-menu">
+        <div class="column">
+          <h3>Food</h3>
+          <a href="#">Dry Food</a>
+          <a href="#">Wet Food</a>
+          <a href="#">Prescribed Food</a>
+        </div>
+        <div class="column">
+          <h3>Treats</h3>
+          <a href="#">Biscuit</a>
+          <a href="#">Dental Treats</a>
+          <a href="#">Calcium chew</a>
+          <a href="#">Chicken Treat</a>
+        </div>
+        <div class="column">
+          <h3>Toys</h3>
+          <a href="#">Cat nip</a>
+          <a href="#">Interactive Toys</a>
+          <a href="#">Teaser and Wonds</a>
+        </div>
+        <div class="column">
+          <h3>Groom</h3>
+          <a href="#">Shampoos</a>
+          <a href="#">Wipes</a>
+          <a href="#">Grooming</a>
+        </div>
+      </div>
+    </div>
+    <!-- Small Pets -->
+    <div class="dropdown">
+      <button class="dropdown-btn" onclick="toggleDropdown(this)">Small Pets ▼</button>
+      <div class="mega-menu">
+        <div class="column">
+          <h3>Food</h3>
+          <a href="#">Pellets And Hay</a>
+        </div>
+        <div class="column">
+          <h3>Small Pet Health</h3>
+          <a href="#">Supplements</a>
+        </div>
+      </div>
+    </div>
+<!-- Birds -->
+
+    <div class="dropdown">
+      <button class="dropdown-btn" onclick="toggleDropdown(this)">Birds ▼</button>
+      <div class="mega-menu">
+        <div class="column">
+          <h3>Food</h3>
+          <a href="#">Seed Mix</a>
+        </div>
+        <div class="column">
+          <h3>Birds Health</h3>
+          <a href="#">Supplements</a>
+        </div>
+      </div>
+    </div>
+
+<!-- Grooming -->
+    <div class="dropdown">
+      <button class="dropdown-btn" onclick="toggleDropdown(this)">Grooming ▼</button>
+      <div class="mega-menu">
+        <div class="column">
+          <h3>Grooming</h3>
+          <a href="#">Shampoo And Conditioner</a>
+          <a href="#">Skin And Coat Care</a>
+          <a href="#">Wipes</a>
+          <a href="#">Grooming Tools</a>
+          <a href="#">Perfume</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vets -->
+    <div class="dropdown">
+      <button class="dropdown-btn"onclick="toggleDropdown(this)">Vets ▼</button>
+      <div class="mega-menu">
+        <div class="column">
+          <h3>Vet Consultation</h3>
+          <a href="#">
+            <img src="image/icons8-pet-50.png" alt="icon">
+          </a>
+
+          <h3>Vet Service <i class="fa-light fa-dog-leashed"></i> </h3>   
+          <a href="#">
+            <img src="image/icons8-dog-walking-80.png" alt="icon">
+          </a>
+          <h3>E Pharmacy</h3>
+          <a href="#">
+            <img src="image/icons8-pharmacy-80.png" alt="icon">
+          </a>
+        </div> 
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropdown-btn"onclick="toggleDropdown(this)">Contact</button>
+    </div>  
+    </div>     
+  </nav>
+
+<!--cat home page -->
+
+  
+
+  <div class="filters">
+    <div class="filter-box">
+      <a href="cattoy.html">
+        <img src="image/Dog/42.jpg" alt="All" />
+        <span>All Toys</span>
+      </a>
+    </div>
+    <div class="filter-box">
+      <a href="catfood.html">
+        <img src="image/Cat/3.jpg" alt="cat Food" />
+        <span>Cat Food</span>
+      </a>
+    </div>
+    <div class="filter-box">
+      <a href="catcloth.html">
+        <img src="image/Cat/7.jpg" alt="Clothing" />
+        <span>Clothings</span>
+      </a>
+    </div>
+    <div class="filter-box">
+      <a href="catvet.html">
+        <img src="image/ste.jpg" alt="Vet Product" />
+        <span>Vet Product</span>
+      </a>
+    </div>
+  </div>
+
+
+<h3 style="text-align:center;font-size: 32px; margin-top:10px;background-color: rgb(222, 250, 250);">Cats</h3>
+  
+
+<div class="products">
+    <div class="product-card">
+      <img src="image/Cat/6.jpg" alt="Toy">
+      <p>⭐ 4.2<br>Chicken Pate</p>
+      <p class="price">Rs. 500</p>
+      <button>Add To Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="image/Cat/7.jpg" alt="Dress">
+      <p>⭐ 4.0<br>Cat Dress</p>
+      <p class="price">Rs. 600</p>
+      <button>Add To Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="image/Cat/9.jpg" alt="Lash">
+      <p>⭐ 4.2<br>Cat Toy</p>
+      <p class="price">Rs. 700</p>
+      <button>Add To Cart</button>
+    </div>
+  </div>
+<!-- banner -->
+  <div class="banner">
+    <img src="image/6kb.gif" alt="cat Cartoon">
+    <div class="banner-text">
+      Get 40%<br>Off on<br>Buying<br>Above 800
+    </div>
+  </div>
+<!-- dog 2nd page -->
+  <div class="products">
+    <div class="product-card">
+      <img src="image/Cat/10.jpg" alt="Belt">
+      <p>⭐ 4.0+<br>Cat Toy</p>
+      <p class="price">Rs. 350</p>
+      <button>Add To Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="image/Cat/8.jpg" alt="cat Belt">
+      <p>⭐ 4.0<br>Cat Green Shirt</p>
+      <p class="price">Rs. 700</p>
+      <button>Add To Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="image/Cat/5.jpg" alt="Sofa">
+      <p>⭐ 4.8<br>Fancy Feast</p>
+      <p class="price">Rs. 580</p>
+      <button>Add To Cart</button>
+    </div>
+  </div>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-columns">
+      <div class="column">
+        <h3>Quick Links</h3>
+        <p>Contact Us</p>
+        <p>FAQs</p>
+        <p>Privacy Policy</p>
+        <p>Track your order</p>
+      </div>
+      <div class="column">
+        <h3>Service</h3>
+        <p>Pet Grooming</p>
+        <p>Vet Consultation</p>
+        <p>Contact Us</p>
+      </div>
+      <div class="column">
+        <h3>Explore</h3>
+       <a style="color: white;" href="about.html">About Us</a>
+        <p>Happy Pets</p>
+      </div>
+      <div class="column subscribe">
+        <h3>Get in Touch for Offers</h3>
+        <div class="subscribe-box">
+          <input type="email" placeholder="Enter your mail id">
+          <button>Submit</button>
+        </div>
+        <p class="email-text">Reach us : <b>support@buffy.com</b></p>
+        <p class="note-text">
+          Join our Zigly community and be the first to know about exciting updates, services, and expert advice on caring for your furry friends.
+        </p>
+        <h3>Connect With Us</h3>
+        <div class="social-icons">
+          <img src="image/facebook.png" alt="Facebook">
+          <img src="image/youtube.png" alt="YouTube">
+          <img src="image/insta.jpg" alt="Instagram">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-banner">
+      <div class="banner-item">
+        <img src="image/truck.png" alt="Free Shipping">
+        <div class="info-text">
+          <strong>Free Shipping</strong>
+          <p>on order all above<br>700</p>
+        </div>
+      </div>
+      <div class="banner-item">
+        <img src="image/return.png" alt="Easy Return">
+        <div class="info-text">
+          <strong>Easy Return</strong>
+          <p>Policy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+  

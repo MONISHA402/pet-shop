@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buffy Pets</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+    }
+
+    /* NAVIGATION BAR */
+.navbar {
+  background-color: #026C6B;
+  padding: 10px 30px;
+  position: relative;
+  
+}
+
+.menu {
+  display: flex;
+  gap:20px;
+}
+
+.dropdown {
+  position: relative;
+  text-align: center;
+}
+
+.dropdown-btn {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 12px 20px;
+  text-align: center;
+  
+}
+.dropdown-btn a{
+  color: white;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+
+}
+.mega-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #d0efef;
+  display: none;
+  padding: 20px;
+  width: max-content;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  gap: 20px;
+  z-index: 999;
+  flex-wrap: wrap;
+  min-width: 150px;
+}
+
+.dropdown:hover .mega-menu {
+  display: flex;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+.column h3 {
+  color: #e4002b;
+  margin-top: 0;
+}
+
+.column a {
+  display: inline-block;
+  margin: 4px 0;
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+ 
+}
+
+.column a:hover {
+  color: #e4002b;
+}
+
+    /* HERO SECTION */
+.hero {
+  background-image: url('image/banner.webp'); 
+  background-size: cover;
+  background-position: center;
+  padding: 50px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
+}
+
+.hero img {
+  width: 180px;
+  height: 200px;
+}
+
+.hero-text {
+  flex: 1;
+  color: #000;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+/* ABOUT SECTION */
+.about {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 2.0rem;
+  line-height: 1.9;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+    }
+
+  .hero img {
+    width: 100px;
+    }
+  }
+/* vision */
+.vision-section {
+  background-color: #c7e1e7;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.vision-container .heart-icon {
+  font-size: 60px;
+  margin-bottom: 40px;
+}
+
+.vision-container h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 50px;
+}
+
+.vision-container p {
+  font-size: 22px;
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* aim */
+.aim-section {
+  background-color: #f5f5fa;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.aim-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.aim-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+  background-color: rgb(206, 181, 207);
+  height:600px;
+
+}
+
+.aim-card {
+  background-color: rgb(206, 181, 207);
+  padding: 20px;
+  width: 350px;
+  height:400px;
+  margin-top: 25px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.aim-card img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.aim-card h3 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.aim-card p {
+  font-size: 20px;
+  color: #333;
+  line-height: 1.5;
+}
+/* Footer */
+/* FOOTER STYLING */
+.footer {
+  background-color: #197D80;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding: 40px 20px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.column {
+  flex: 1 1 220px;
+}
+
+.column h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.column p {
+  margin: 6px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.subscribe-box {
+  display: flex;
+  margin: 10px 0;
+  max-width: 100%;
+}
+
+.subscribe-box input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  width: 60%;
+}
+
+.subscribe-box button {
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.email-text {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.note-text {
+  font-style: italic;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.social-icons img {
+  width: 35px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* FOOTER BANNER BELOW */
+.footer-banner {
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: left;
+  width: 600px;
+  gap: 40px;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.banner-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.banner-item img {
+  width: 90px;
+  height: 90px;
+}
+
+  </style>
+</head>
+<body>
+
+ <!-- Navigation -->
+  <nav class="navbar">
+    <div class="menu">
+      <div class="dropdown">
+      <button class="dropdown-btn"><a href="index.html">Home</a></button>
+      </div>
+      
+      
+      <div class="dropdown">
+      <button class="dropdown-btn" onclick="toggleDropdown(this)">Dogs ▼</button>
+      <div class="mega-menu">
+        <div class="column">
+          <h3>Food</h3>
+          <a href="#">Dry Food</a>
+          <a href="#">Wet Food </a>
+          <a href="#">Prescribed Food</a>
+          
+        </div>
+        <div class="column">
+          <h3>Treats</h3>
+          <a href="#">Biscuit</a>
+          <a href="#">Dental Treats</a>
+          <a href="#">Calcium chew</a>
+          <a href="#">Chicken Treat</a>
+        </div>
+        <div class="column">
+          <h3>Clothing</h3>
+          <a href="#">Coat</a>
+          <a href="#">Jacket</a>
+          <a href="#">T shirt</a>
+          <a href="#">Shirt</a>
+        </div>
+        <div class="column">
+          <h3>Groom</h3>
+          <a href="#">Shampoos</a>
+          <a href="#">Wipes</a>
+          <a href="#">Grooming Tool</a>
+        </div>
+      </div>
+    </div>
+<!-- cat -->
+    <div class="dropdown">
+      <button class="dropdown-btn" onclick="toggleDropdown(this)">Cats ▼</button>
+      <div class="mega-menu">
+        <div class="column">
+          <h3>Food</h3>
+          <a href="#">Dry Food</a>
+          <a href="#">Wet Food</a>
+          <a href="#">Prescribed Food</a>
+        </div>
+        <div class="column">
+          <h3>Treats</h3>
+          <a href="#">Biscuit</a>
+          <a href="#">Dental Treats</a>
+          <a href="#">Calcium chew</a>
+          <a href="#">Chicken Treat</a>
+        </div>
+        <div class="column">
+          <h3>Toys</h3>
+          <a href="#">Cat nip</a>
+          <a href="#">Interactive Toys</a>
+          <a href="#">Teaser and Wonds</a>
+        </div>
+        <div class="column">
+          <h3>Groom</h3>
+          <a href="#">Shampoos</a>
+          <a href="#">Wipes</a>
+          <a href="#">Grooming</a>
+        </div>
+      </div>
+    </div>
+    <!-- Small Pets -->
+    <div class="dropdown">
+      <button class="dropdown-btn" onclick="toggleDropdown(this)">Small Pets ▼</button>
+      <div class="mega-menu">
+        <div class="column">
+          <h3>Food</h3>
+          <a href="#">Pellets And Hay</a>
+        </div>
+        <div class="column">
+          <h3>Small Pet Health</h3>
+          <a href="#">Supplements</a>
+        </div>
+      </div>
+    </div>
+<!-- Birds -->
+
+    <div class="dropdown">
+      <button class="dropdown-btn" onclick="toggleDropdown(this)">Birds ▼</button>
+      <div class="mega-menu">
+        <div class="column">
+          <h3>Food</h3>
+          <a href="#">Seed Mix</a>
+        </div>
+        <div class="column">
+          <h3>Birds Health</h3>
+          <a href="#">Supplements</a>
+        </div>
+      </div>
+    </div>
+
+<!-- Grooming -->
+    <div class="dropdown">
+      <button class="dropdown-btn" onclick="toggleDropdown(this)">Grooming ▼</button>
+      <div class="mega-menu">
+        <div class="column">
+          <h3>Grooming</h3>
+          <a href="#">Shampoo And Conditioner</a>
+          <a href="#">Skin And Coat Care</a>
+          <a href="#">Wipes</a>
+          <a href="#">Grooming Tools</a>
+          <a href="#">Perfume</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vets -->
+    <div class="dropdown">
+      <button class="dropdown-btn"onclick="toggleDropdown(this)">Vets ▼</button>
+      <div class="mega-menu">
+        <div class="column">
+          <h3>Vet Consultation</h3>
+          <a href="#">
+            <img src="image/icons8-pet-50.png" alt="icon">
+          </a>
+
+          <h3>Vet Service <i class="fa-light fa-dog-leashed"></i> </h3>   
+          <a href="#">
+            <img src="image/icons8-dog-walking-80.png" alt="icon">
+          </a>
+          <h3>E Pharmacy</h3>
+          <a href="#">
+            <img src="image/icons8-pharmacy-80.png" alt="icon">
+          </a>
+        </div> 
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropdown-btn"onclick="toggleDropdown(this)">Contact</button>
+    </div>  
+    </div>     
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="image/2.gif" alt="Cute Dog"> 
+    <div class="hero-text">
+      <h1>Making Pet Parenting Pretty Amazing</h1>
+      <p>You know what’s our favorite jam?<br>Your pet’s happiness. And ultimately yours.</p>
+    </div>
+    <img src="image/6kb.gif" alt="Cute Cat"> 
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About Buffy Pets</h2>
+    <p>
+      From grooming and pampering to helping you buy the best products for your pets, 
+      consider Buffy as your one-stop destination for all-things-pets. We understand 
+      what a pet parent truly wants to have their pets lead a life brimming with 
+      health and happiness and are passionate about making that possible.
+    </p>
+  </section>
+<!-- vision -->
+  <section class="vision-section">
+  <div class="vision-container">
+    <div class="heart-icon">❤️</div>
+    <h2>The Vision that Keeps Us Going</h2>
+    <p>
+      To build India’s largest pet care ecosystem <br>
+      by providing pet families with compassionate, reliable and competent pet care.
+    </p>
+  </div>
+</section>
+
+<!-- aim -->
+<section class="aim-section">
+  <h2>What are We Aiming to Accomplish?</h2>
+  <div class="aim-cards">
+    <div class="aim-card">
+      <img src="image/Vet/2.jpg" alt="Expert Partner">
+      <h3>For Expert Partner</h3>
+      <p>
+        To recognise and value our expert partners for their contribution in building and strengthening the pet care ecosystem
+      </p>
+    </div>
+    <div class="aim-card">
+      <img src="image/Vet/1.jpg" alt="Independent Caregivers">
+      <h3>For Independent Caregivers</h3>
+      <p>
+        To provide steady and equitable income opportunities to pet lovers who choose to transform their passion into profession
+      </p>
+    </div>
+    <div class="aim-card">
+      <img src="image/Vet/3.jpg" alt="Pet Families">
+      <h3>For Pet Families</h3>
+      <p>
+        To provide easy access to reliable, standardised and quality pet care that enhances the joy of pet parenting.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-columns">
+      <div class="column">
+        <h3>Quick Links</h3>
+        <p>Contact Us</p>
+        <p>FAQs</p>
+        <p>Privacy Policy</p>
+        <p>Track your order</p>
+      </div>
+      <div class="column">
+        <h3>Service</h3>
+        <p>Pet Grooming</p>
+        <p>Vet Consultation</p>
+        <p>Contact Us</p>
+      </div>
+      <div class="column">
+        <h3>Explore</h3>
+        <a style="color: white;" href="about.html">About Us</a>
+        <p>Happy Pets</p>
+      </div>
+      <div class="column subscribe">
+        <h3>Get in Touch for Offers</h3>
+        <div class="subscribe-box">
+          <input type="email" placeholder="Enter your mail id">
+          <button>Submit</button>
+        </div>
+        <p class="email-text">Reach us : <b>support@buffy.com</b></p>
+        <p class="note-text">
+          Join our Zigly community and be the first to know about exciting updates, services, and expert advice on caring for your furry friends.
+        </p>
+        <h3>Connect With Us</h3>
+        <div class="social-icons">
+           <img src="image/facebook.png" alt="Facebook">
+          <img src="image/youtube.png" alt="YouTube">
+          <img src="image/insta.jpg" alt="Instagram">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-banner">
+      <div class="banner-item">
+        <img src="image/truck.png" alt="Free Shipping">
+        <div>
+          <strong>Free Shipping</strong>
+          <p>on order all above<br>700</p>
+        </div>
+      </div>
+      <div class="banner-item">
+        <img src="image/return.png" alt="Easy Return">
+        <div>
+          <strong>Easy Return</strong>
+          <p>Policy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
